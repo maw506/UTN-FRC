@@ -1,6 +1,11 @@
 import random
 from datetime import datetime
 
+
+def patente(patente):
+    pass
+
+
 """ la siguientes funciones devuelven el tiempo trancurrido
     *instanteInicial = datetime.now()
     *instanteFinal = datetime.now() 
