@@ -1,4 +1,4 @@
-
+import random
 from datetime import datetime
 
 """ la siguientes funciones devuelven el tiempo trancurrido
@@ -6,6 +6,10 @@ from datetime import datetime
     *instanteFinal = datetime.now() 
     *tiempo = instanteFinal - instanteInicial # Devuelve un objeto timedelta
     *segundos = tiempo.seconds """
+
+vehiculo = 'Moto', 'Auto', 'Camion'
+letras = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+numeros = '0123456789'
 
 instanteInicial = datetime.now()
 op = 0
