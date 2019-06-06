@@ -40,8 +40,6 @@ def patentealeatoria():
 
     return patente
 
-    return patente
-
 
 def tipo_vehiculo():
     vehiculo = 'Moto', 'Auto', 'Camion'
@@ -92,14 +90,50 @@ def carga_random():
             r_t += 40
         else:
             r_t += 80
+    print(p_a, "\n")
 
+
+def carga_manual():
+    c_m = 0
+    c_p = 0
+    c_a = 0
+    c_c = 0
+    r_e = 0
+    r_t = 0
+
+    c_p += 1
+    v_a = int(input("\ntipo de vehiculo: "))
+    print(v_a)
+    p_a = int(input("tipo de pago: "))
+    if v_a == 'Moto':
+        c_m += 1
+    elif v_a == 'Auto':
+        c_a += 1
+    else:
+        c_c += 1
+    if p_a == 2:
+        patente = input("Patente: ")
+        print(patente)
+    if p_a == 1:
+        if v_a == 'Moto':
+            r_e += 20
+        elif v_a == 'Auto':
+            r_e += 40
+        else:
+            r_e += 80
+    else:
+        if v_a == 'Moto':
+            r_t += 20
+        elif v_a == 'Auto':
+            r_t += 40
+        else:
+            r_t += 80
     print(p_a, "\n")
 
 
 def menu():
     op = 0
     dif = 0
-
     while op != 3:
         print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual \n3 = Salir")
         op = int(input("\nIngrese una opcion: "))
@@ -113,9 +147,8 @@ def menu():
 
         elif op == 2:  # carga de datos de forma manual
             inicio = time.time()
-            while dif < 240:
-                auto = input("ingrese auto: ")
-                pause = time.sleep(1)
+            while dif < 15:
+                carga_manual()
                 final = time.time()
                 dif = final - inicio
         elif op == 3:
