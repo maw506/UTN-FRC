@@ -47,6 +47,7 @@ def tipo_pago():
     pago = 1,2 #1 efectivo,2 telepeaje
     pago_elejido = random.choice(pago)
     return pago_elejido
+
 c_p += 1
 v_a = tipo_vehiculo()
 print(v_a)
@@ -74,5 +75,6 @@ else:
         r_t += 40
     else:
         r_t += 80
+
 
 
