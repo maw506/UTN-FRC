@@ -60,5 +60,9 @@ segundos = tiempo.seconds
 print("segundos:", segundos)
 
 if op = 1:
+<<<<<<< HEAD
+    print('Ingrese tipo de vehiculo')
+>>>>>>> f61996f04da64e32d0833afd526688878389fa81
+=======
     print('Ingrese tipo de vehiculo')
 >>>>>>> f61996f04da64e32d0833afd526688878389fa81
