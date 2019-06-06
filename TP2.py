@@ -24,7 +24,6 @@ def menu():
         else:
             msj = "ERROR! opcion seleccionada no valida \nPorfavor elija de nuevo:"
     print(msj)
-    return msj
 
 
 """ la siguientes funciones devuelven el tiempo trancurrido
