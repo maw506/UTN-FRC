@@ -9,8 +9,13 @@ def menu():
     while op != 3:
         print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual \n3 = Salir")
         op = int(input("\nIngrese una opcion: "))
-        if op == 1:
-            msj = "eligio 1"
+        if op == 1: # carga de datos automatica
+            inicio = time.time()
+            while dif < 240:
+                auto = input("ingrese auto: ")
+                pause = time.sleep(1)
+                final = time.time()
+                dif = final - inicio
         elif op == 2: # carga de datos de forma manual
             inicio = time.time()
             while dif < 240:
