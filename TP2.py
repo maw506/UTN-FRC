@@ -27,3 +27,6 @@ tiempo = instanteFinal - instanteInicial # Devuelve un objeto timedelta
 segundos = tiempo.seconds
 
 print("segundos:", segundos)
+
+if op = 1:
+    print('Ingrese tipo de vehiculo')
