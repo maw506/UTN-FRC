@@ -139,7 +139,8 @@ def menu():
     telepeaje = 0
     cantPases += 1
     while op != 3:
-        print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual \n3 = Salir")
+        print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual "
+              "\n3 = Salir")
         op = int(input("\nIngrese una opcion: "))
         if op == 1:  # carga de datos automatica
             inicio = time.time()
@@ -176,11 +177,12 @@ def menu():
                 time.sleep(3)
                 final = time.time()
                 dif = final - inicio
-            print("\nTelepeaje: ", telepeaje, "\nEfectivo: ", efectivo, "\nMotos", cantMoto, "\nCamiones", cantCamiones, "\nAutos: ", cantAuto, "\n",)
+            print("\nTelepeaje: ", telepeaje, "\nEfectivo: ", efectivo, "\nMotos", cantMoto,
+                  "\nCamiones", cantCamiones, "\nAutos: ", cantAuto, "\n",)
         elif op == 2:  # carga de datos de forma manual
             inicio = time.time()
             while dif < 15:
-                carga_manual()
+
                 final = time.time()
                 dif = final - inicio
         elif op == 3:
