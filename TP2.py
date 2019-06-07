@@ -131,6 +131,13 @@ def carga_manual():
 def menu():
     op = 0
     dif = 0
+    cantMoto = 0
+    cantPases = 0
+    cantAuto = 0
+    cantCamiones = 0
+    efectivo = 0
+    telepeaje = 0
+    cantPases += 1
     while op != 3:
         print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual \n3 = Salir")
         op = int(input("\nIngrese una opcion: "))
@@ -138,13 +145,6 @@ def menu():
             inicio = time.time()
             while dif < 15:
                 # carga_random()
-                cantMoto = 0
-                cantPases = 0
-                cantAuto = 0
-                cantCamiones = 0
-                efectivo = 0
-                telepeaje = 0
-                cantPases += 1
 
                 vehiculo = tipo_vehiculo()
                 print(vehiculo)
@@ -172,6 +172,7 @@ def menu():
                         telepeaje += 40
                     else:
                         telepeaje += 80
+
                 time.sleep(3)
                 final = time.time()
                 dif = final - inicio
