@@ -62,7 +62,6 @@ def carga_random():
     c_c = 0
     r_e = 0
     r_t = 0
-
     c_p += 1
     v_a = tipo_vehiculo()
     print(v_a)
@@ -90,7 +89,6 @@ def carga_random():
             r_t += 40
         else:
             r_t += 80
-    print(p_a, "\n")
 
 
 def carga_manual():
@@ -100,7 +98,6 @@ def carga_manual():
     c_c = 0
     r_e = 0
     r_t = 0
-
     c_p += 1
     v_a = int(input("\ntipo de vehiculo: "))
     print(v_a)
@@ -140,11 +137,45 @@ def menu():
         if op == 1:  # carga de datos automatica
             inicio = time.time()
             while dif < 15:
-                carga_random()
+                # carga_random()
+                cantMoto = 0
+                cantPases = 0
+                cantAuto = 0
+                cantCamiones = 0
+                efectivo = 0
+                telepeaje = 0
+                cantPases += 1
+
+                vehiculo = tipo_vehiculo()
+                print(vehiculo)
+                pago = tipo_pago()
+                if vehiculo == 'Moto':
+                    cantMoto += 1
+                elif vehiculo == 'Auto':
+                    cantAuto += 1
+                else:
+                    cantCamiones += 1
+                if pago == 2:
+                    patente = patentealeatoria()
+                    print(patente)
+                if pago == 1:
+                    if vehiculo == 'Moto':
+                        efectivo += 20
+                    elif vehiculo == 'Auto':
+                        efectivo += 40
+                    else:
+                        efectivo += 80
+                else:
+                    if vehiculo == 'Moto':
+                        telepeaje += 20
+                    elif vehiculo == 'Auto':
+                        telepeaje += 40
+                    else:
+                        telepeaje += 80
                 time.sleep(3)
                 final = time.time()
                 dif = final - inicio
-
+            print("\nTelepeaje: ", telepeaje, "\nEfectivo: ", efectivo, "\nMotos", cantMoto, "\nCamiones", cantCamiones, "\nAutos: ", cantAuto, "\n",)
         elif op == 2:  # carga de datos de forma manual
             inicio = time.time()
             while dif < 15:
