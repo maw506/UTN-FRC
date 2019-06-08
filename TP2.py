@@ -1,10 +1,6 @@
 import time
 import random
 
-c_m=c_a=c_c=c_p= 0
-r_e = r_t = 0
-
-
 def patentealeatoria():
     t_p = 1,2
     t_p_a = random.choice(t_p)
@@ -204,7 +200,6 @@ def menu():
     cantCamiones = 0
     efectivo = 0
     telepeaje = 0
-    cantPases == 0
 
     while op != 3:
         print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual "
