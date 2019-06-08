@@ -1,6 +1,7 @@
 import random
 c_m=c_a=c_c=c_p= 0
 r_e = r_t = 0
+
 def patentealeatoria():
     t_p = 1,2
     t_p_a = random.choice(t_p)
