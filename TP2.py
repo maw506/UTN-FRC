@@ -154,11 +154,11 @@ def menu():
 
     while op != 3:
         print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual "
-              "\n3 = Salir")
+              "\n3 = Procesar Datos \n4 = salir")
         op = int(input("\nIngrese una opcion: "))
         if op == 1:  # carga de datos automatica
             inicio = time.time()
-            while dif < 40:
+            while dif < 7:
                 vehiculo = tipo_vehiculo()
                 pago = tipo_pago()
 
@@ -195,8 +195,9 @@ def menu():
                 total = telepeaje + efectivo
 
         elif op == 2:  # carga de datos de forma manual
+
             inicio = time.time()
-            while dif < 20:
+            while dif < 240:
                 op2 = -1
                 while op2 != 2:
                     print("\nOPCIONES: \n1 = Pago en efectivo \n2 = Telepeaje \n3 = Salir")
@@ -241,14 +242,16 @@ def menu():
                 dif = final - inicio
                 total = telepeaje + efectivo
         elif op == 3:
+            total = telepeaje + efectivo
+            print("\nTotal: $",total, "\nTelepeaje: $",telepeaje, "\nEfectivo: $",efectivo, "\nMotos:", cantMoto,
+                  "\nCamiones:", cantCamiones, "\nAutos:", cantAuto, "\nCantidad total de pases:", cantPases,
+                  "\nmayor hora:", mayor)
+        elif op == 4:
             print("salir")
             break
         else:
             print("ERROR! opcion seleccionada no valida \nPorfavor elija de nuevo:")
 
-    print("\nTotal: $",total, "\nTelepeaje: $",telepeaje, "\nEfectivo: $",efectivo, "\nMotos:", cantMoto,
-          "\nCamiones:", cantCamiones, "\nAutos:", cantAuto, "\nCantidad total de pases:", cantPases,
-          "\nmayor hora:", mayor)
 
 
 menu()
