@@ -88,40 +88,74 @@ def validar_patente(patente):
     return msj
 
 
-def carga_random():
-    c_m = 0
-    c_p = 0
-    c_a = 0
-    c_c = 0
-    r_e = 0
-    r_t = 0
-    c_p += 1
-    v_a = tipo_vehiculo()
-    print(v_a)
-    p_a = tipo_pago()
-    if v_a == 'Moto':
-        c_m += 1
-    elif v_a == 'Auto':
-        c_a += 1
+def mayor_hora(hora, pases):
+    pas1 = 0
+    pas2 = 0
+    pas3 = 0
+    pas4 = 0
+    may = 0
+
+    if hora == 10:
+        pas1 = pases
+    elif hora == 20:
+        pas2 = pases
+    elif hora == 30:
+        pas3 = pases
+    elif hora == 40:
+        pas4 = pases
+
+    if pas1 > pas2 and pas1 > pas3 and pas1 > pas4:
+        may = pas1
+    elif pas2 > pas3 and pas2 > pas4 and pas2 > pas1:
+        may = pas2
+    elif pas3 > pas4 and pas3 > pas1 and pas3 > pas2:
+        may = pas3
     else:
-        c_c += 1
-    if p_a == 2:
+        may = pas4
+
+    return may
+
+
+def carga_random():
+    cantMoto = 0
+    cantPases = 0
+    cantAutos = 0
+    cantCamiones = 0
+    efectivo = 0
+    telepeaje = 0
+    cantT = 0
+    cantE = 0
+    cantPases += 1
+    vehiculo = tipo_vehiculo()
+    print(vehiculo)
+    pago = tipo_pago()
+    if vehiculo == 'Moto':
+        cantMoto += 1
+    elif vehiculo == 'Auto':
+        cantAutos += 1
+    else:
+        cantCamiones += 1
+    if pago == 2:
         patente = patentealeatoria()
         print(patente)
-    if tipo_pago() == 1:
-        if tipo_vehiculo() == 'Moto':
-            r_e += 20
-        elif tipo_vehiculo() == 'Auto':
-            r_e += 40
+    if pago == 1:
+        cantT += 1
+        if vehiculo == 'Moto':
+            efectivo += 20
+        elif vehiculo == 'Auto':
+            efectivo += 40
         else:
-            r_e += 80
+            efectivo += 80
     else:
-        if tipo_vehiculo() == 'Moto':
-            r_t += 20
-        elif tipo_vehiculo() == 'Auto':
-            r_t += 40
+        cantE += 1
+        if vehiculo == 'Moto':
+            telepeaje += 20
+        elif vehiculo == 'Auto':
+            telepeaje += 40
         else:
-            r_t += 80
+            telepeaje += 80
+
+    return telepeaje, efectivo, cantCamiones, cantAutos, cantMoto, cantPases, cantE, cantT
 
 
 def carga_manual():
@@ -178,12 +212,14 @@ def menu():
         op = int(input("\nIngrese una opcion: "))
         if op == 1:  # carga de datos automatica
             inicio = time.time()
-            while dif < 15:
+            while dif < 40:
                 # carga_random()
 
                 vehiculo = tipo_vehiculo()
                 print(vehiculo)
                 pago = tipo_pago()
+                canT = 0
+                canE = 0
                 if vehiculo == 'Moto':
                     cantMoto += 1
                 elif vehiculo == 'Auto':
@@ -191,34 +227,40 @@ def menu():
                 else:
                     cantCamiones += 1
                 if pago == 2:
+                    canT += 1
                     patente = patentealeatoria()
                     print(patente)
-                if pago == 1:
-                    if vehiculo == 'Moto':
-                        efectivo += 20
-                    elif vehiculo == 'Auto':
-                        efectivo += 40
-                    else:
-                        efectivo += 80
-                else:
                     if vehiculo == 'Moto':
                         telepeaje += 20
                     elif vehiculo == 'Auto':
                         telepeaje += 40
                     else:
                         telepeaje += 80
+                if pago == 1:
+                    canE += 1
+                    if vehiculo == 'Moto':
+                        efectivo += 20
+                    elif vehiculo == 'Auto':
+                        efectivo += 40
+                    else:
+                        efectivo += 80
 
-                time.sleep(random.randint(1, 8))
                 final = time.time()
+                time.sleep(random.randint(1, 2))
+                cantPases += 1
                 dif = final - inicio
-            print("\nTelepeaje: ", telepeaje, "\nEfectivo: ", efectivo, "\nMotos", cantMoto,
-                  "\nCamiones", cantCamiones, "\nAutos: ", cantAuto, "\n",)
+                mayor = mayor_hora(final, cantPases)
+                total = telepeaje + efectivo
+
+
+            print("\nTotal:", total, "\nTelepeaje:", telepeaje, "\nEfectivo:", efectivo, "\nMotos:", cantMoto,
+                  "\nCamiones:", cantCamiones, "\nAutos:", cantAuto, "\nCantidad total de pases:", cantPases,
+                  "\nmayor hora:", mayor)
         elif op == 2:  # carga de datos de forma manual
             inicio = time.time()
             while dif < 15:
                 patente = input('ingrese una patente: ')
                 print(validar_patente(patente))
-
                 final = time.time()
                 dif = final - inicio
         elif op == 3:
