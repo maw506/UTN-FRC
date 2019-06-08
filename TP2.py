@@ -55,7 +55,7 @@ def tipo_pago():
     return pago_elejido
 
 
-def validarPatente(patente):
+def validar_patente(patente):
 
     letras = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     numeros = '0123456789'
@@ -68,16 +68,18 @@ def validarPatente(patente):
 
     if long == 6:
         for i in patente:
-            caracteres += 1
-            if i in letras:
-                contL += 1
-                if contL > 3:
-                    msj = "error patente ingresada"
-            elif i in numeros:
-                contN += 1
-                if contN > 3:
-                    msj = "error patente ignresada"
-        print('patente')
+            if patente != '.':
+                caracteres += 1
+                if i in letras:
+                    contL += 1
+                    if contL > 3:
+                        msj = "error patente ingresada"
+                elif i in numeros:
+                    contN += 1
+                    if contN > 3:
+                        msj = "error patente ignresada"
+            else:
+                break
     elif long == 7:
         pass
     else:
@@ -168,7 +170,8 @@ def menu():
     cantCamiones = 0
     efectivo = 0
     telepeaje = 0
-    cantPases += 1
+    cantPases == 0
+
     while op != 3:
         print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual "
               "\n3 = Salir")
@@ -211,11 +214,10 @@ def menu():
             print("\nTelepeaje: ", telepeaje, "\nEfectivo: ", efectivo, "\nMotos", cantMoto,
                   "\nCamiones", cantCamiones, "\nAutos: ", cantAuto, "\n",)
         elif op == 2:  # carga de datos de forma manual
-            patente = 0
             inicio = time.time()
             while dif < 15:
                 patente = input('ingrese una patente: ')
-                print(validarPatente(patente))
+                print(validar_patente(patente))
 
                 final = time.time()
                 dif = final - inicio
