@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c85448f-4f82-4642-8555-651e403dd2ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funcionaleatipodevehiculo.py" beforeDir="false" afterPath="$PROJECT_DIR$/funcionaleatipodevehiculo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba patente.py" beforeDir="false" afterPath="$PROJECT_DIR$/prueba patente.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,13 +18,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TP2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="277" column="21" selection-start-line="277" selection-start-column="21" selection-end-line="277" selection-end-column="21" />
+            <state relative-caret-position="451">
+              <caret line="264" column="27" lean-forward="true" selection-start-line="264" selection-start-column="27" selection-end-line="264" selection-end-column="27" />
               <folding>
+                <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#55#1166#0" />
                 <element signature="e#1194#1281#0" />
                 <element signature="e#1306#1403#0" />
                 <element signature="e#1441#3252#0" />
+                <element signature="e#9481#9613#0" />
               </folding>
             </state>
           </provider>
@@ -233,13 +232,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="277" column="21" selection-start-line="277" selection-start-column="21" selection-end-line="277" selection-end-column="21" />
+        <state relative-caret-position="451">
+          <caret line="264" column="27" lean-forward="true" selection-start-line="264" selection-start-column="27" selection-end-line="264" selection-end-column="27" />
           <folding>
+            <element signature="e#0#11#0" expanded="true" />
             <element signature="e#55#1166#0" />
             <element signature="e#1194#1281#0" />
             <element signature="e#1306#1403#0" />
             <element signature="e#1441#3252#0" />
+            <element signature="e#9481#9613#0" />
           </folding>
         </state>
       </provider>
