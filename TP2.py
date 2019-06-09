@@ -53,7 +53,7 @@ def tipo_pago():
 
 
 def validar_patente(patente):
-
+    # Analiza las patentes cargadas de forma manual, para verificar que sean validas y no tengan errores.
     contador_caracteres = contador_letras = contador_numeros = 0
 
     letras = ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z')
