@@ -196,11 +196,10 @@ def menu():
 
             inicio = time.time()
             while dif < 240:
-                op2 = -1
-                while op2 != 2:
+                while op != 3:
                     print("\nOPCIONES: \n1 = Pago en efectivo \n2 = Telepeaje \n3 = Salir")
-                    op2 = int(input("Ingrese forma de pago: "))
-                    if op2 == 1:
+                    op = int(input("Ingrese forma de pago: "))
+                    if op == 1:
                         canE += 1
                         cantPases += 1
                         print("\nOPCIONES: \n1 = Auto \n2 = Moto \n3 = camion")
@@ -216,7 +215,7 @@ def menu():
                             efectivo += 80
                         else:
                             print("opcion ingresada es invalida")
-                    elif op2 == 2:
+                    elif op == 2:
                         canT += 1
                         cantPases += 1
                         print("\nOPCIONES: \n1 = Auto \n2 = Moto \n3 = camion")
@@ -231,7 +230,7 @@ def menu():
                                 telepeaje += 80
                         else:
                             print("La Patente ingresada es incorrecta, por favor ingresela de nuevo")
-                    elif op2 == 3:
+                    elif op == 3:
                         print("salir")
                         corteCargaManual = False
                         break
