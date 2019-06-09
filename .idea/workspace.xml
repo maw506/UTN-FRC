@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c85448f-4f82-4642-8555-651e403dd2ce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,13 +19,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TP2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+            <state relative-caret-position="604">
+              <caret line="270" column="19" lean-forward="true" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#55#1166#0" />
                 <element signature="e#1194#1281#0" />
                 <element signature="e#1306#1403#0" />
+                <element signature="e#1441#3543#0" />
                 <element signature="e#9481#9613#0" />
               </folding>
             </state>
@@ -191,13 +192,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49891776" visible="true" weight="0.2528978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50108224" side_tool="true" weight="0.2528978" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -230,13 +232,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        <state relative-caret-position="604">
+          <caret line="270" column="19" lean-forward="true" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
             <element signature="e#55#1166#0" />
             <element signature="e#1194#1281#0" />
             <element signature="e#1306#1403#0" />
+            <element signature="e#1441#3543#0" />
             <element signature="e#9481#9613#0" />
           </folding>
         </state>

@@ -268,6 +268,7 @@ def menu():
                   "\nCamiones:", cantCamiones, "\nAutos:", cantAuto, "\nCantidad total de pases:", cantPases,
                   "\nMetodo de pago mas usado:", masUsado, "\nPromedio de pases por hora: ",
                   prom, "\nLa hora pico fue:", hora,"º")
+            input()
         elif op == 4:
             print("salir")
             break
