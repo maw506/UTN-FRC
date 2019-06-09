@@ -110,34 +110,32 @@ def validar_patente(patente):
 
 
 def menu():
-    dif = 0
-    cantMoto = 0
-    cantPases = 0
-    cantAuto = 0
-    cantCamiones = 0
-    efectivo = 0
-    telepeaje = 0
-    mayor = 0
-    op = 0
-    canT = 0
-    canE = 0
+    dif = 0  # diferencia de tiempo
+    cantMoto = 0  # cantidad de motos (contador)
+    cantPases = 0  # cantidad de veces que paso un vehiculo (contador)
+    cantAuto = 0  # cantidad de autos (contador)
+    cantCamiones = 0  # cantidad de camiones (contador)
+    efectivo = 0  # cantidad de dinero recaudado en efectivo
+    telepeaje = 0  # cantidad de dinero recaudado por telepeaje
+    op = 0  # opcion
+    canT = 0  # cantidad de veces que se uso el telepeaje
+    canE = 0  #cantidad de veces que se pago en efectivo
     patente = 0
     hora = 0
-    mayPass1 =0
+    mayPass1 =0  #se utilizan para determinar cual fue la hora pico
     mayPass2 = 0
     mayPass3 = 0
     mayPass4 = 0
-    corteCargaManual = True
+    corteCargaManual = True  # bandera para indicar un corte del menu de carga manual
     while op != 3:
         print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual "
               "\n3 = Procesar Datos \n4 = salir")
         op = int(input("\nIngrese una opcion: "))
         if op == 1:  # carga de datos automatica
-
-            inicio = time.time()
+            inicio = time.time()  # comienaza contar el tiempo a partir desde que sse elige la opcion
             while dif < 240:
-                vehiculo = tipo_vehiculo()
-                pago = tipo_pago()
+                vehiculo = tipo_vehiculo()  # utiliza la funcion y guarda el valor que devuelve en la variable
+                pago = tipo_pago()  # utiliza la funcion para elegir un tipo de pago aleatorio
 
                 if vehiculo == 'Moto':
                     cantMoto += 1
@@ -145,17 +143,17 @@ def menu():
                     cantAuto += 1
                 else:
                     cantCamiones += 1
-                if pago == 2:
-                    canT += 1
-                    patente = patentealeatoria()
+                if pago == 2:  # 2 = pago por telepeaje
+                    canT += 1  # aumenta el contador dde telepeaje
+                    patente = patentealeatoria()  # crea una patente aleatoria por medio de la funcion
                     if vehiculo == 'Moto':
                         telepeaje += 20
                     elif vehiculo == 'Auto':
                         telepeaje += 40
                     else:
                         telepeaje += 80
-                if pago == 1:
-                    canE += 1
+                if pago == 1:  # 1 = pago en efectivo
+                    canE += 1  # aumenta el contador de efectivo
                     patente = 0
                     if vehiculo == 'Moto':
                         efectivo += 20
@@ -166,12 +164,13 @@ def menu():
 
                 print("\nVehiculo:", vehiculo, "\nPatente:", patente)
 
-                final = time.time()
-                time.sleep(random.randint(1, 2))
-                cantPases += 1
-                dif = final - inicio
+                final = time.time()  # guarda el tiempo final en una variable
+                time.sleep(random.randint(1, 8))  # con el objetivo de consumir tiempo utilzamos la funcion time.sleep()
+                cantPases += 1  # incrementa el contdor de pases
+                dif = final - inicio  # por formula, sabemos que el tiempo transcurrido es la diferencia
+                                      # entre final - incio
 
-                if 59 < dif < 61:
+                if 59 < dif < 61:  # compara si el tiempo esta entre ese intervalo y guarda la cantidad de pases
                     mayPass1 = cantPases
                 elif 119 < dif < 121:
                     mayPass2 = cantPases
@@ -180,7 +179,8 @@ def menu():
                 elif 238 < dif < 240:
                     mayPass4 = cantPases
 
-                if mayPass1 > mayPass2 and mayPass1 > mayPass3 and mayPass1 > mayPass4:
+                if mayPass1 > mayPass2 and mayPass1 > mayPass3 and mayPass1 > mayPass4:  # compara cual es mayor para
+                                                                                         # determinar la hora pico
                     hora = 1
                 elif mayPass2 > mayPass3 and mayPass2 > mayPass4 and mayPass2 > mayPass1:
                     hora = 2
@@ -196,13 +196,13 @@ def menu():
                 op2 = -1
                 while op2 != 2:
                     print("\nOPCIONES: \n1 = Pago en efectivo \n2 = Telepeaje \n3 = Salir")
-                    op2 = int(input("Ingrese forma de pago: "))
-                    if op2 == 1:
+                    op2 = int(input("Ingrese forma de pago: "))  # opcion para sellecionar tipo de pago
+                    if op2 == 1:  # pago en efectivo
                         canE += 1
                         cantPases += 1
                         print("\nOPCIONES: \n1 = Auto \n2 = Moto \n3 = camion")
-                        vehiculo = int(input("ingrese tipo de vehiculo: "))
-                        if vehiculo == 1:
+                        vehiculo = int(input("ingrese tipo de vehiculo: "))  # opcion para selecionar tipo de vehiculo
+                        if vehiculo == 1:  # opcion auto
                             cantAuto += 1
                             efectivo += 40
                         elif vehiculo == 2:
@@ -256,10 +256,10 @@ def menu():
                 if corteCargaManual == False:
                     break
 
-        elif op == 3:
-            total = telepeaje + efectivo
-            prom = (canE + canT) / 4
-            if canT > canE:
+        elif op == 3:  # opcion procesar datos
+            total = telepeaje + efectivo  #suma el total recaudado
+            prom = (canE + canT) / 4  #realiza un promedio de pases por hora
+            if canT > canE:  # compara cual metodo de pago fue el mas usado
                 masUsado = "telepeaje"
             else:
                 masUsado = "efectivo"
@@ -275,8 +275,9 @@ def menu():
         else:
             print("ERROR! opcion seleccionada no valida \nPorfavor elija de nuevo:")
 
-x = "*" * 25
 
+
+x = "*" * 25
 print("\n" ,x, "\n\tSistema de Peaje\n", x, "\n\tA continuacion se le muestran las\n"
-                                            "\topciones que puede poner en funcionamiento")
+      "\topciones que puede poner en funcionamiento")
 menu()
