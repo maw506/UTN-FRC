@@ -80,6 +80,9 @@ def validar_patente(patente):
             else:
                 validar = False
                 break
+        elif car not in letras and car not in numeros:
+            validar = False
+            break
         elif car == ' ' or car == '.':
             if contador_caracteres == 7:
                 break
@@ -127,6 +130,7 @@ def menu():
     mayPass2 = 0
     mayPass3 = 0
     mayPass4 = 0
+    corteCargaManual = True
     while op != 3:
         print("\nOPCIONES: \n1 = Para generar datos de forma automatica \n2 = Para ingresar datos de forma manual "
               "\n3 = Procesar Datos \n4 = salir")
@@ -229,6 +233,7 @@ def menu():
                             print("La Patente ingresada es incorrecta, por favor ingresela de nuevo")
                     elif op2 == 3:
                         print("salir")
+                        corteCargaManual = False
                         break
                     else:
                         print("opcion ingresada es invalida")
@@ -251,6 +256,8 @@ def menu():
                     hora = 3
                 else:
                     hora = 4
+                if corteCargaManual == False:
+                    break
 
         elif op == 3:
             total = telepeaje + efectivo
@@ -272,6 +279,6 @@ def menu():
 
 x = "*" * 25
 
-print("\n" ,x, "\n\tsistema de Peaje\n", x, "\n\tA continuacion se le muestran las\n"
+print("\n" ,x, "\n\tSistema de Peaje\n", x, "\n\tA continuacion se le muestran las\n"
                                             "\topciones que puede poner en funcionamiento")
 menu()

@@ -1,25 +1,33 @@
-c_c = c_l = c_n = 0
-
-letras = ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W', 'X','Y', 'Z')
-numeros = '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
 patente = input()
-patente2 = ""
-for car in patente:
-    if car == ' ' or car == '.':
-        if c_c == 6:
-            print(patente2)
-    elif car in letras:
-        c_l +=1
-        c_c +=1
-        patente2 += car
-        if c_l == 4:
-            break
-    elif car in numeros:
-        if c_l == 3:
-            c_n += 1
-            c_c += 1
+def validar_patente_LLLNNN(patente):
+
+    contador_caracteres = contador_letras = contador_numeros = 0
+
+    letras = ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W', 'X','Y', 'Z')
+    numeros = '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+    patente2 = ""
+    validar = True
+    for car in patente:
+
+        if car == ' ' or car == '.':
+            if contador_caracteres == 6:
+                break
+        elif car in letras:
+            contador_letras +=1
+            contador_caracteres +=1
             patente2 += car
-        else:
-            break
+            if contador_letras == 4:
+                validar = False
+                break
+        elif car in numeros:
+            if contador_letras == 3:
+                contador_numeros += 1
+                contador_caracteres += 1
+                patente2 += car
+            else:
+                validar = False
+                break
 
+    return validar
 
+print(validar_patente_LLLNNN(patente))

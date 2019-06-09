@@ -49,6 +49,7 @@ def tipo_pago():
     pago_elejido = random.choice(pago)
     return pago_elejido
 
+
 c_p += 1
 v_a = tipo_vehiculo()
 print(v_a)
