@@ -57,7 +57,6 @@ def validar_patente(patente):
 
     letras = ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z')
     numeros = '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
-    patente2 = ""
     long = len(patente)
     validar = True
     banderaParaLLNNNLL = True
@@ -69,7 +68,6 @@ def validar_patente(patente):
             elif car in letras:
                 contador_letras +=1
                 contador_caracteres +=1
-                patente2 += car
                 if contador_letras == 4:
                     validar = False
                     break
@@ -77,7 +75,6 @@ def validar_patente(patente):
                 if contador_letras == 3:
                     contador_numeros += 1
                     contador_caracteres += 1
-                    patente2 += car
                 else:
                     validar = False
                     break
@@ -92,7 +89,6 @@ def validar_patente(patente):
             elif car in letras:
                 contador_letras += 1
                 contador_caracteres += 1
-                patente2 += car
                 if banderaParaLLNNNLL == True:
                     if contador_letras == 3:
                         validar = False
@@ -102,7 +98,6 @@ def validar_patente(patente):
                 if contador_letras == 2:
                     contador_numeros += 1
                     contador_caracteres += 1
-                    patente2 += car
                     if contador_letras == 2:
                         banderaParaLLNNNLL = False
                 else:
