@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c85448f-4f82-4642-8555-651e403dd2ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,13 +18,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TP2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="270" column="19" lean-forward="true" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
+            <state relative-caret-position="136">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
               <folding>
                 <element signature="e#55#1166#0" />
-                <element signature="e#1194#1281#0" />
+                <element signature="e#1513#1600#0" />
                 <element signature="e#1306#1403#0" />
                 <element signature="e#1441#3543#0" />
+                <element signature="e#3257#9421#0" />
                 <element signature="e#9481#9613#0" />
               </folding>
             </state>
@@ -232,13 +232,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TP2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="270" column="19" lean-forward="true" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
+        <state relative-caret-position="136">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
           <folding>
             <element signature="e#55#1166#0" />
-            <element signature="e#1194#1281#0" />
+            <element signature="e#1513#1600#0" />
             <element signature="e#1306#1403#0" />
             <element signature="e#1441#3543#0" />
+            <element signature="e#3257#9421#0" />
             <element signature="e#9481#9613#0" />
           </folding>
         </state>

@@ -2,21 +2,21 @@ import time
 import random
 
 def patentealeatoria():
-    t_p = 1,2
-    t_p_a = random.choice(t_p)
-    if t_p_a == 1:
-
+    t_p = 1,2  #se define los tipos de: 1 = LLLNNN, 2 = LLNNNLL
+    t_p_a = random.choice(t_p) #elije un tipo de patente
+    if t_p_a == 1: #se elije la patente de tipo LLLNNN
+        # se definen las letras y numeros
         letras = ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z')
         numeros = '0','1','2','3','4','5','6','7','8','9'
-
+        # se crean 3 variables con letras aleatorias
         letra1 = random.choice(letras)
         letra2 = random.choice(letras)
         letra3 = random.choice(letras)
-
+        # se crean 3 variables con numeros aleatorios
         numero1 = random.choice(numeros)
         numero2 = random.choice(numeros)
         numero3 = random.choice(numeros)
-
+        # se suman las variables para formar la patente
         patente = letra1+letra2+letra3+numero1+numero2+numero3
     else:
 
@@ -38,6 +38,7 @@ def patentealeatoria():
 
 
 def tipo_vehiculo():
+    #esta funcion elije un tipo de vehiculo aleatorio
     vehiculo = 'Moto', 'Auto', 'Camion'
 
     pase = random.choice(vehiculo)
@@ -45,7 +46,7 @@ def tipo_vehiculo():
 
 
 def tipo_pago():
-
+    #esta funcion elije un tipo de pago aleatorio,ya sea en efectivo o con telepeaje
     pago = 1,2 #1 efectivo,2 telepeaje
     pago_elejido = random.choice(pago)
     return pago_elejido
