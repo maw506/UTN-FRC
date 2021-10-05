@@ -35,4 +35,5 @@ def validarPatente(patente):
     return msj
 
 
+validarPatente(patente1)
 
